@@ -1,0 +1,25 @@
+.myPhoto {
+  width: 200px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: 1px solid white;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+}
+
+.custom-collapse {
+  width: 900px;
+  margin: 0 auto;
+}
+.leaveMeMessage {
+  margin: 10px auto 20px;
+}

@@ -1,0 +1,154 @@
+@mixin textFamily {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.custom-collapse {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.custom-padding {
+    padding: 10px 100px;
+}
+
+#mainHead {
+    .logo {
+        font-family:
+            Helvetica,
+            Arial,
+            sans-serif !important;
+        font-weight: 400;
+        line-height: 56.4px;
+    }
+    .navbar {
+        padding-bottom:0;
+    }
+    .nav-pills .nav-link.active {
+        background-color: transparent !important;
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .nav-link.active {
+        font-weight: bold;
+        text-shadow: 1px 1px #070707;
+    }
+    .nav-link {
+        font-size: large;
+    }
+    #navbarSupportedContent {
+        span {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+#aboutMe {
+    height: calc(100vh - 74.4px - 26.5px);
+    h1 {
+        @include textFamily
+    }
+    .myPhoto {
+        width: 370px;
+        height: 350px;
+        margin: 30px auto auto 100px;
+    }
+    .aboutMeContent {
+        width: 50%;
+        height:100%;
+    }
+}
+#myProjects {
+    h1 {
+        @include textFamily
+    }
+    .projectList {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        .card {
+            display:flex;
+            flex-direction:column;
+            height:100vh;
+            width:100%;
+            max-width: 400px;
+            justify-content: space-between;
+            img{
+                width: 100%;
+                height:200px
+            }
+            .cardBody {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .mt-auto {
+                margin-top: auto;
+            }
+        }   
+    }
+}
+#myResume {
+    .sideBar {
+        width:30%;
+    }
+    .resumeContent {
+        width:70%;
+        h3, p {
+                color: rgba(71, 71, 71, 0.75)
+            }
+    }
+    li {
+        list-style: square;
+        color: rgba(71, 71, 71, 0.75)
+    }
+}
+#contact {
+    .contactContent {
+        @include textFamily
+    }
+    h6, p {
+        font-size: 0.8125rem;
+        line-height: 1.25em;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+    }
+    #contactForm {
+        .info {
+            width:1000px;
+            height:50px;
+        }
+        .firstName {
+            width: 24%;
+        }
+        .lastName {
+            margin-left:20px;
+            width: 24%;
+        }
+        .btn {
+            width:550px;
+        }
+    }
+}
+[data-bs-theme="dark"] #myResume li,
+[data-bs-theme="dark"] #myResume h3,
+[data-bs-theme="dark"] #myResume p {
+    color: #f6ecec;
+}
+
+[data-bs-theme="dark"] #mainFooter .github {
+    color: #ffffff;
+}
+[data-bs-theme="light"] #mainFooter .github {
+    color: #070707;
+}
+
+
