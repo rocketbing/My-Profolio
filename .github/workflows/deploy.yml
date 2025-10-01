@@ -25,22 +25,23 @@ jobs:
         run: npm run build
 
       - name: Clean old files on server
-        uses: appleboy/ssh-action@v0.1.8
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
           script: |
-            rm -rf ${{ secrets.REMOTE_PATH }}/*
+            rm -rf /www/wwwroot/Steve_Portfolio/*
 
       - name: Upload built files to server (no dist/)
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           source: "dist/**"
-          target: ${{ secrets.REMOTE_PATH }}
+          target: "/www/wwwroot/Steve_Portfolio/"
           strip_components: 1
 
       - name: SSH into server and restart services (optional)
@@ -48,6 +49,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
           script: |
             echo "Deployment complete"
