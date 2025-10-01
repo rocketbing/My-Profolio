@@ -121,7 +121,7 @@ The project can be deployed to any static hosting service:
 - **Vercel**: `vercel --prod`
 - **Netlify**: Connect your GitHub repository
 - **GitHub Pages**: Use GitHub Actions
-- **Firebase Hosting**: `firebase deploy`
+- **Firebase Hosting**: `firebase deploy`1
 
 ## License
 
