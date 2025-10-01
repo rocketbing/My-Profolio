@@ -32,7 +32,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             rm -rf ${{ secrets.REMOTE_PATH }}/*
-          fail_on_std_err: true
 
       - name: Upload built files to server (no dist/)
         uses: appleboy/scp-action@v0.1.7
