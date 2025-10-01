@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           source: "dist/**"
-          target: "/www/wwwroot/Steve_Portfolio/"
+          target: "/www/wwwroot/Steve_Portfolio"
           strip_components: 1
 
       - name: SSH into server and restart services (optional)
