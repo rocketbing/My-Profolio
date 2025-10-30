@@ -32,7 +32,9 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
-            rm -rf /www/wwwroot/Steve_Portfolio
+            cd /www/wwwroot/Steve_Portfolio || exit 1
+            echo "Cleaning old files except .user.ini ..."
+            find . -mindepth 1 ! -name '.user.ini' -exec rm -rf {} +
 
       - name: Upload built files to server (no dist/)
         uses: appleboy/scp-action@v0.1.7
