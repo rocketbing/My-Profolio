@@ -40,9 +40,6 @@ const Experience = () => {
           <motion.div className="text-center mb-16" variants={itemVariants}>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Professional Experience</h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-4"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              My journey in education and leadership has shaped my approach to problem-solving and team collaboration
-            </p>
           </motion.div>
 
           <div className="relative">
@@ -85,7 +82,7 @@ const Experience = () => {
                         <span>{experience.period}</span>
                       </div>
                     </div>
-
+                    <p className="font-semibold mb-4">{experience.title}</p>
                     <ul className="space-y-2 mb-4">
                       {experience.description.map((desc, descIndex) => (
                         <li key={descIndex} className="flex items-start gap-2">
@@ -94,7 +91,18 @@ const Experience = () => {
                         </li>
                       ))}
                     </ul>
-
+                    {experience.cross_platform_title && (
+                      <><p className="font-semibold mb-4">{experience.cross_platform_title}</p>
+                      <ul className="space-y-2 mb-4">
+                        {experience.cross_platform_description.map((desc, descIndex) => (
+                          <li key={descIndex} className="flex items-start gap-2">
+                            <span className="text-primary mt-2">•</span>
+                            <span className="text-muted-foreground">{desc}</span>
+                          </li>
+                        ))}
+                      </ul></>
+                    
+                    )}
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, techIndex) => (
                         <span

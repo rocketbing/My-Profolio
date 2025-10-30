@@ -5,16 +5,25 @@ export const experiences = [
     position: "Front End Web Developer",
     location: "Toronto, CA",
     period: "Sept 2024 - Present",
+    title:'International Logistics Management Platform with separate user interface (Vue 3) and admin interfaces (React 18) used by international clients and internal teams',
     description: [
-      "Built reusable UI components (CustomTable, CustomInput, CustomCard) by Element Plus with standardized CSS styling and consistent configurations (e.g. validation, pagination), while ensuring flexibility and extensibility through props, emits, and slots (e.g., conditional selection input in CustomTable, password strength indicator with progress bar in CustomInput).",
-      "Developed a responsive and scalable design system by centralizing global SCSS variables and breakpoints (e.g., typography scaling, color tokens, reusable mixins) to ensure consistency and maintainability across the application, while complementing it with component-level media queries and targeted utility classes (e.g., Bootstrap col-md-3, scoped SCSS) to fine-tune layouts and interactions for individual components.",
-      "Implemented Pinia and its intuitively persisted state plugin to design modular store structures (user authentication, goods management, order workflows, etc.) that keep separation of concerns, achieve unified data flow, and reduce redundant logic (e.g., clearing all session and local storage with $reset on logout).",
-      "Engineered a bilingual internationalization system by storing all translation entries in database, enabling translation updates without modifying local code to reduce deployment overhead, while leveraging Vue I18n to maintain a local backup of all translations as a contingency in case the backend database becomes unavailable.",
-      "Built Axios interceptors to auto-inject authentication tokens for secure API requests and dynamically set Content-Type for diverse payloads. Centralized status code handling (e.g., auto-logout on 401) and standardized localized notifications with silent handling, improving security, maintainability, and user experience consistency across the application.",
-      "Coordinated closely with dev team to integrate and optimize APIs, engaged with PM to discuss feature scops, UI/UX improvement, and progress updates, aligned with BA to confirm functionalities met business requirements, and collaborated with unit testing teams to investigate and resolve bugs through practical methods (examining logs, testing hooks, etc.).",
-      "Applied a series of engineering best practices to enhance code maintainability and performance, including consistent code formatting with Prettier, cleaner imports with path aliases, optimized performance with lazy loading via Vue Router dynamic imports, and reduced logic redundancy with utility functions (e.g. calculator.js for dynamically calculating shipping price)."
+      "Set up a consistent and scalable design system by centralizing global SCSS variables and reusable mixins, which improved UI consistency and reduced styling maintenance time.",
+      "Used Pinia (Vue) and Redux Toolkit (React) to organize state logic across modules like user auth, orders, and goods management, reducing duplicated code and improving data flow.",
+      "Added bilingual support (English/Chinese) with a database-driven translation system that allows dynamic updates without redeploying, improving accessibility for global users.",
+      "Implemented secure authentication with Axios interceptors, token validation, and role-based access control to ensure data safety across different user levels.",
+      "Built a real-time analytics dashboard with Recharts and Ant Design for tracking revenue, orders, and profit trends, including Excel export and customizable filters for financial reviews.",
+      "Developed a customer service dashboard for handling complaints, after-sales data, and compensation workflows, providing visibility into service quality and processing times.",
+      "Integrated TinyMCE and React-Quill editors for managing email templates and announcements, supporting live HTML preview and API-based CRUD operations."
     ],
-    technologies: ["Vue.js (Vue 3)", "Express.js", "MangoDB","Vue Router","Pinia","Vue I18n","Axios","Element Plus","SCSS","Prettier"]
+    technologies: ["Vue.js (Vue 3)", "React 18", "Express.js", "MangoDB","Vue & React Router", "Redux Toolkit", "Pinia","Vue I18n","Axios","Element Plus","Ant Design","SCSS","Prettier"],
+    cross_platform_title:'Cross-Platform Development',
+    cross_platform_description:[
+      "Created shared UI components (tables, inputs, cards) for both Vue and React apps with standardized styling, flexible props (dynamic data) and conditional rending for easy reuse.",
+      "Centralized API handling with Axios interceptors for token injection, error handling, and localized user notifications to keep the experience consistent.",
+      "Worked closely with product managers, business analysts, and QA engineers to refine requirements, improve usability, and troubleshoot issues efficiently.",
+      "Applied best practices (Prettier formatting, path aliases, lazy loading, and utility functions) to keep the codebase clean and performant.",
+      "Used AI tools to automate repetitive work and speed up debugging, helping the team deliver features faster and with fewer errors. "
+    ]
   },
   {
     id: 2,
